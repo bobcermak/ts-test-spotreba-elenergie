@@ -28,8 +28,7 @@ for (let i of data)   {
 celkWatt = (prikonSoucet / casSoucet) * 3.6  // kW/h
 celkSpotreba = celkWatt * 6.7
 
-
-console.log("Celkové kilowatt hodiny jsou " + celkWatt + " kW")
 console.log("Celkem vás to vyšlo na " + celkSpotreba + " Kč")
+console.log("Celkové kilowatt hodiny jsou " + celkWatt + " kW")
 
 
