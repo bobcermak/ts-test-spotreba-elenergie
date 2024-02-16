@@ -4,15 +4,14 @@ type Odber = {
 }
 
 let data: Array<Odber> = [
-    { cas: 1000 , prikon: 3500},
+    { cas: 1000 , prikon: 3500},  // W/H
     { cas: 3000, prikon: 4000 },
     { cas: 2000, prikon: 3500 },
     { cas: 4000, prikon: 4000 },
-    { cas: 2000, prikon: 3500 },
+    { cas: 2000, prikon: 3500 }, // W/S
 ]
 
 //kilowatt = 6,7Kc
-
 
 let prikonSoucet: number = 0
 let casSoucet: number = 0
@@ -21,13 +20,13 @@ let celkWatt1: number = 0
 let celkSpotreba: number = 0
 
 for (let i of data)   {
-    casSoucet += i.cas
-    prikonSoucet += i.prikon
+    casSoucet += i.cas / 1000
+    prikonSoucet += i.prikon / 3600
 }
 
 
-celkWatt = prikonSoucet / (casSoucet / 1000)  //W/s
-celkSpotreba = celkWatt*3,6 * 6.7
+celkWatt = (prikonSoucet / casSoucet) * 3,6  // kW/h
+celkSpotreba = celkWatt * 6,7
 
 
 
