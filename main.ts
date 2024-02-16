@@ -16,7 +16,7 @@ let data: Array<Odber> = [
 let prikonSoucet: number = 0
 let casSoucet: number = 0
 let celkWatt: number = 0
-let celkWatt1: number = 0
+let celkWatt1: number = 0 
 let celkSpotreba: number = 0
 
 for (let i of data)   {
@@ -25,14 +25,11 @@ for (let i of data)   {
 }
 
 
-celkWatt = (prikonSoucet / casSoucet) * 3,6  // kW/h
-celkSpotreba = celkWatt * 6,7
+celkWatt = (prikonSoucet / casSoucet) * 3.6  // kW/h
+celkSpotreba = celkWatt * 6.7
 
 
-
-
-
-console.log(celkWatt)
-console.log(celkSpotreba)
+console.log("Celkové kilowatt hodiny jsou " + celkWatt + " kW")
+console.log("Celkem vás to vyšlo na " + celkSpotreba + " Kč")
 
 
